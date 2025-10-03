@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>	
+
+<!-- Wis'adel -->
+
+<!-- Basic attack -->
+
+<DamageDef>
+<defName>WisadelBasicBoomSTNL</defName>
+<label>Explosion</label>
+<workerClass>DamageWorker_AddInjury</workerClass>
+<externalViolence>true</externalViolence>
+<isExplosive>true</isExplosive>
+<deathMessage>{0} has died in an explosion.</deathMessage>
+<hediff>Shredded</hediff>
+<hediffSolid>Crack</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Blunt</impactSoundType>
+<armorCategory>Sharp</armorCategory>
+<minDamageToFragment>15</minDamageToFragment>
+<defaultDamage>25</defaultDamage>
+<defaultStoppingPower>0.5</defaultStoppingPower>
+<defaultArmorPenetration>1</defaultArmorPenetration>
+<buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+<buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+<plantDamageFactor>4</plantDamageFactor>
+<corpseDamageFactor>0.5</corpseDamageFactor>
+<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+<explosionCellFleck>BlastDry</explosionCellFleck>
+<explosionColorCenter>(1, 0, 0)</explosionColorCenter>
+<explosionColorEdge>(0.7, 0, 0)</explosionColorEdge>
+<soundExplosion>Psycast_DawnShotExploSTNL</soundExplosion>
+<combatLogRules>Damage_Bomb</combatLogRules>
+</DamageDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>VPE_Wisadelshot</defName>
+		<label>Explosive Dawn Shot</label>
+		<description>A ball of flame launched by a conflagrator</description>
+		<graphicData>
+			<texPath>Things/RevenantShot/Revenantshot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<explosionRadius>1.5</explosionRadius>
+			<damageDef>WisadelBasicBoomSTNL</damageDef>
+			<speed>50</speed>
+			<ai_IsIncendiary>false</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>WisadelBasicAttackSTNL</defName>
+<label>Explosive Shock</label>
+<description>Immediatly shoot an explosive projectile at the target.</description>
+<iconPath>UI_WisadelSTNL/Abilities/Basic</iconPath>
+<castSound>BasicAttackWalterSTNL</castSound>
+<castTime>15</castTime>
+<range>15.9</range>
+<radius>1.5</radius>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WisadelSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.05</psyfocusCost>
+<entropyGain>25</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Projectile">
+        <projectile>VPE_Wisadelshot</projectile>
+        <forcedMissRadius>0.5</forcedMissRadius>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Revenant Shadow -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_RevenantTurretSTNL</defName>
+<label>Revenant Shadow</label>
+<description>Summon a revenant shadow, the caster will become invisible for 5 hours, the shadow lasting for that duration.</description>
+<iconPath>UI_WisadelSTNL/Abilities/Shadow</iconPath>
+<castSound>PsychicRitual_Interrupted</castSound>
+<durationTime>12500</durationTime>
+<castTime>15</castTime>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WisadelSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>WisadelBasicAttackSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>RevenantInvisWisadelSTNL</li>
+</onCaster>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>Turret_RevenantSTNL</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Explosive Dawn -->
+
+<DamageDef>
+<defName>DawnBoomSTNL</defName>
+<label>Explosive Dawn</label>
+<workerClass>DamageWorker_AddInjury</workerClass>
+<externalViolence>true</externalViolence>
+<isExplosive>true</isExplosive>
+<deathMessage>{0} has died in an explosion.</deathMessage>
+<hediff>Shredded</hediff>
+<hediffSolid>Crack</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Blunt</impactSoundType>
+<armorCategory>Sharp</armorCategory>
+<minDamageToFragment>15</minDamageToFragment>
+<defaultDamage>100</defaultDamage>
+<defaultStoppingPower>0.5</defaultStoppingPower>
+<defaultArmorPenetration>5</defaultArmorPenetration>
+<buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+<buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+<plantDamageFactor>4</plantDamageFactor>
+<corpseDamageFactor>0.5</corpseDamageFactor>
+<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+<explosionCellFleck>BlastDry</explosionCellFleck>
+<explosionColorCenter>(1, 0, 0)</explosionColorCenter>
+<explosionColorEdge>(0.7, 0, 0)</explosionColorEdge>
+<soundExplosion>Psycast_DawnShotExploSTNL</soundExplosion>
+<combatLogRules>Damage_Bomb</combatLogRules>
+</DamageDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>VPE_Explodawnshot</defName>
+		<label>Explosive Dawn Shot</label>
+		<description>A ball of flame launched by a conflagrator</description>
+		<graphicData>
+			<texPath>Things/RevenantShot/Revenantshot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<explosionRadius>4.5</explosionRadius>
+			<damageDef>DawnBoomSTNL</damageDef>
+			<speed>50</speed>
+			<ai_IsIncendiary>false</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ExplosiveDawnSTNL</defName>
+<label>Explosive Dawn</label>
+<description>Immediatly shoot an explosive projectile at the target.</description>
+<iconPath>UI_WisadelSTNL/Abilities/Explodawn</iconPath>
+<castSound>Psycast_DawnShotSTNL</castSound>
+<castTime>15</castTime>
+<range>15.9</range>
+<radius>4.5</radius>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WisadelSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.15</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_RevenantTurretSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Projectile">
+        <projectile>VPE_Explodawnshot</projectile>
+        <forcedMissRadius>0.5</forcedMissRadius>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- W -->
+
+<!-- King Of Hearts -->
+
+<DamageDef>
+<defName>WGrenadeSTNL</defName>
+<label>Explosion</label>
+<workerClass>DamageWorker_AddInjury</workerClass>
+<externalViolence>true</externalViolence>
+<isExplosive>true</isExplosive>
+<deathMessage>{0} has died in an explosion.</deathMessage>
+<hediff>Shredded</hediff>
+<hediffSolid>Crack</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Blunt</impactSoundType>
+<armorCategory>Sharp</armorCategory>
+<minDamageToFragment>15</minDamageToFragment>
+<defaultDamage>50</defaultDamage>
+<defaultStoppingPower>0.5</defaultStoppingPower>
+<defaultArmorPenetration>0.5</defaultArmorPenetration>
+<buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+<buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+<plantDamageFactor>4</plantDamageFactor>
+<corpseDamageFactor>0.5</corpseDamageFactor>
+<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+<explosionCellFleck>BlastDry</explosionCellFleck>
+<explosionColorCenter>(1, 0, 0)</explosionColorCenter>
+<explosionColorEdge>(0.7, 0, 0)</explosionColorEdge>
+<soundExplosion>Psycast_DawnShotExploSTNL</soundExplosion>
+<combatLogRules>Damage_Bomb</combatLogRules>
+</DamageDef>
+
+  <ThingDef Name="WGrenadeSTNLPsy" ParentName="BaseGrenadeProjectile" Abstract="True">
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.9</explosionRadius >
+      <damageDef>WGrenadeSTNL</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionDelay>50</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="WGrenadeSTNLPsy">
+    <defName>Proj_WGrenadeFragSTNL</defName>
+    <label>frag grenade</label>
+  </ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_KingofheartsSTNL</defName>
+<label>King of hearts</label>
+<description>Immediatly launch a grenade dealing 50 points of damage and ignoring 50% of the target's armor.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/W/KingOfHearts</iconPath>
+<castSound>Interact_ChargeLance</castSound>
+<castTime>15</castTime>
+<range>15.9</range>
+<radius>1.5</radius>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.05</psyfocusCost>
+<entropyGain>15</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Projectile">
+        <projectile>Proj_WGrenadeFragSTNL</projectile>
+        <forcedMissRadius>0.5</forcedMissRadius>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Jack In The Box -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_WMineSpawnSTNL</defName>
+<label>Jack in the box</label>
+<description>Buries a mine (lasts forever) in a walkable tile within 8 tiles of the user the mine will detonate when an enemy steps over it.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/W/Jackinthebox</iconPath>
+<castSound>Interact_ChargeLance</castSound>
+<castTime>15</castTime>
+<range>7.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>15</entropyGain>
+<prerequisites>
+<li>VPE_KingofheartsSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>TrapIED_WSTNL</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>RaisedRock_Collapse</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>0.6</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- D12 -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_WD12STNL</defName>
+<label>D12</label>
+<description>Places bombs on enemies within AOE range of this psycast, the bombs will detonate instantly.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/W/D12</iconPath>
+<castSound>Interact_ChargeLance</castSound>
+<castTime>15</castTime>
+<range>13.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VPE_Arknights.Ability_D12</abilityClass>
+<needsTicking>true</needsTicking>
+<radius>3.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_WSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.35</psyfocusCost>
+<entropyGain>35</entropyGain>
+<prerequisites>
+<li>VPE_WMineSpawnSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>TrapIED_WSTNL</building>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Civilight Eterna -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_PastLingeringSTNL</defName>
+<label>The Past Lingering</label>
+<description>Grants additional defensive capabilities to nearby allies, excluding self.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/CivilightEterna/Thepastlingering</iconPath>
+<castTime>15</castTime>
+<durationTime>12000</durationTime>
+<castSound>PastlingeringSTNL</castSound>
+<range>7.9</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_Pastlingering</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<radius>5.9</radius>
+ <hasAoE>true</hasAoE>
+ <targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_EternaSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_FutureelusiveSTNL</defName>
+<label>The Future Elusive</label>
+<description>All allies in range will obtain the Inspiration hediff granting bonus damage to their attacks (Excluding the caster). Enemies in range will obtain the Discouragement hediff weakening their attacks.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/CivilightEterna/Thefutureelusive</iconPath>
+<castTime>15</castTime>
+<castSound>FutureelusiveSTNL</castSound>
+<durationTime>12000</durationTime>
+<range>12.9</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_FutureElusive</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<radius>9.9</radius>
+ <hasAoE>true</hasAoE>
+ <targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_EternaSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_PastLingeringSTNL</li>
+</prerequisites>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_PresentreconstructedSTNL</defName>
+<label>The Present Reconstructed</label>
+<description>All allies in range will obtain the Regeneration hediff granting them increased healing (Caster Included). Enemies in range will obtain the Stagnation hediff, nullifying their ability to heal from wounds.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/CivilightEterna/Thepresentreconstructed</iconPath>
+<castTime>15</castTime>
+<castSound>PresentreconstructedSTNL</castSound>
+<durationTime>12000</durationTime>
+<range>12.9</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PresentReconstructed</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<radius>9.9</radius>
+ <hasAoE>true</hasAoE>
+ <targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <targetingParametersForAoE>
+      <canTargetSelf>True</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_EternaSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.49</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_FutureelusiveSTNL</li>
+</prerequisites>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Amiya Guard -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_YingASTNL</defName>
+<label>Ying Xiao - Fleeting Night</label>
+<description>ATK +50%, -10% Incoming damage, ATK speed x2.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/AmiyaGuard/YingA</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>12000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_GuardmiyaSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>FleetingNightSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastGoToTargetBase">
+<defName>VPE_YingBSTNL</defName>
+<label>Ying Xiao - Shadowless</label>
+<description>Immediately attacks the target in front of the caster 10 times for 30 damage per slash. Afterwards, this pawn will deal double melee damage for 6 hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/AmiyaGuard/YingB</iconPath>
+<durationTime>12000</durationTime>
+<castTime>15</castTime>
+<castSound>FleetingNightSTNL</castSound>
+<range>231.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VPE_Arknights.Ability_10Slash</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_GuardmiyaSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.75</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_YingASTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>ShadowlessSTNL</li>
+</onCaster>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Projectile">
+        <projectile>SlashSTNL</projectile>
+      </li>
+	  <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>NociosphereDepartComplete</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<DamageDef Name="CutBaseTRUEDMGSTNL">
+<defName>CutTrueDMGSTNL</defName>
+<label>slash</label>
+<workerClass>DamageWorker_Cut</workerClass>
+<externalViolence>true</externalViolence>
+<deathMessage>{0} has been cut to death by true damage.</deathMessage>
+<hediff>Cut</hediff>
+<hediffSkin>Cut</hediffSkin>
+<hediffSolid>Cut</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Slice</impactSoundType>
+<armorCategory>Sharp</armorCategory>
+<defaultArmorPenetration>9999999</defaultArmorPenetration>
+<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+<cutExtraTargetsCurve>
+<points>
+<li>0, 0</li>
+<li>0.6, 1</li>
+<li>0.9, 2</li>
+<li>1, 3</li>
+</points>
+</cutExtraTargetsCurve>
+<cutCleaveBonus>1.4</cutCleaveBonus>
+</DamageDef>
+
+<ThingDef ParentName="BaseBullet">
+    <defName>SlashSTNL</defName>
+    <label>Slash</label>
+    <graphicData>
+      <texPath>Things/Revenantshadow/None</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>CutTrueDMGSTNL</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <stoppingPower>99999</stoppingPower>
+      <speed>500</speed>
+    </projectile>
+</ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_WrathfulceruleanflameSTNL</defName>
+<label>Wrathful Cerulean Flame</label>
+<description>All allied units on the battlefield gain +14% ATK and will take -14% incoming damage.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/AmiyaGuard/Wrath</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_Wrathfulceruleanflame</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<radius>231.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>True</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_GuardmiyaSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>15</entropyGain>
+<prerequisites>
+<li>VPE_YingBSTNL</li>
+</prerequisites>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Ines -->
+
+<DamageDef Name="ArtsDOTSTNL">
+<defName>ArtsDOTINESSTNL</defName>
+<label>arts</label>
+<workerClass>DamageWorker_Cut</workerClass>
+<externalViolence>true</externalViolence>
+<deathMessage>{0} has been cut to death by arts damage.</deathMessage>
+<hediff>Cut</hediff>
+<hediffSkin>Cut</hediffSkin>
+<hediffSolid>Cut</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Slice</impactSoundType>
+<armorCategory>Sharp</armorCategory>
+<defaultArmorPenetration>9999999</defaultArmorPenetration>
+<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+<cutExtraTargetsCurve>
+<points>
+<li>0, 0</li>
+<li>0.6, 1</li>
+<li>0.9, 2</li>
+<li>1, 3</li>
+</points>
+</cutExtraTargetsCurve>
+<cutCleaveBonus>1.4</cutCleaveBonus>
+</DamageDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ShadowRaidSTNL</defName>
+<label>Shadow Raid</label>
+<description>This attack deals Arts DOT to the target for a short time.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ines/Shadowraid</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>600</durationTime>
+<range>6.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_InesSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.09</psyfocusCost>
+<entropyGain>20</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>VPE_InesArtsDOTSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_MurkyNightSTNL</defName>
+<label>Murky Night</label>
+<description>+50% ATK SPD, gain invisiblity for an hour.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ines/Murkynight</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_InesSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_ShadowRaidSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>MurkyNightSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SolitaryReturnSTNL</defName>
+<label>Solitary Return</label>
+<description>Deploy a Shadow Sentry to a location of your choosing, the sentry will slow down anyone passing nearby and will last for 2 hours. Additionally obtain 110% ATK bonus for a duration of 1 hour.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ines/Solitaryreturn</iconPath>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<castTime>15</castTime>
+<range>9.9</range>
+<radius>2.5</radius>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_InesSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_MurkyNightSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>SolitaryReturnBuffSTNL</li>
+</onCaster>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>ShadowSentrySTNL</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>0.5</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Mudrock -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_DefupmudrockSTNL</defName>
+<label>DEF Up</label>
+<description>x0.40% incoming damage for an hour.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Mudrock/DEFup</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MudrockSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.15</psyfocusCost>
+<entropyGain>30</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>DEFupmudSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastGoToTargetBase">
+<defName>VPE_CragSplitterSTNL</defName>
+<label>Crag Splitter</label>
+<description>The next attack will temporarily grant regeneration to the caster and deal 50 damage to the target.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Mudrock/Cragsplitter</iconPath>
+<durationTime>120</durationTime>
+<castTime>15</castTime>
+<castSound>FleetingNightSTNL</castSound>
+<range>231.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MudrockSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>15</entropyGain>
+<prerequisites>
+<li>VPE_DefupmudrockSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>RegenerationMudrockSTNL</li>
+</onCaster>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Projectile">
+        <projectile>BluntSTNL</projectile>
+      </li>
+	  <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>NociosphereDepartComplete</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<DamageDef Name="ClubBaseTRUEDMGSTNL">
+<defName>BluntDMGSTNL</defName>
+<label>Crush</label>
+<workerClass>DamageWorker_AddInjury</workerClass>
+<externalViolence>true</externalViolence>
+<deathMessage>{0} has been crushed to death.</deathMessage>
+<hediff>Crack</hediff>
+<hediffSolid>Crack</hediffSolid>
+<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+<impactSoundType>Blunt</impactSoundType>
+<armorCategory>Blunt</armorCategory>
+<defaultArmorPenetration>9999</defaultArmorPenetration>
+<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+</DamageDef>
+
+<ThingDef ParentName="BaseBullet">
+    <defName>BluntSTNL</defName>
+    <label>crag splitter</label>
+    <graphicData>
+      <texPath>Things/Revenantshadow/None</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BluntDMGSTNL</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>500</speed>
+    </projectile>
+</ThingDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BloodlineSTNL</defName>
+<label>Bloodline of Desecrated Earth</label>
+<description>Upon skill activation, this pawn does not take damage for 30 seconds and caps the movement speed of surrounding enemies to 20% for that duration.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Mudrock/Bloodline</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>1800</durationTime>
+<range>0</range>
+<radius>6.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_BloodlineDesecrated</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MudrockSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_CragSplitterSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>MudrockGodmodeSTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Silence -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SilencePassiveSTNL</defName>
+<label>Passive (Self): Booster Injection</label>
+<description>Obtain faster immunity gain and healing speed.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Silence/Silencepassive</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SilenceSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.10</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>SilencePassiveSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SilenceMedUpSTNL</defName>
+<label>Healing Up</label>
+<description>Grant increased healing factor to the target for 12 Hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Silence/Healingup</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>30000</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SilenceSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_SilencePassiveSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>HealingupsilenceSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_MedicalDroneSTNL</defName>
+<label>Medical Drone</label>
+<description>Deploy a Medical Drone to a location of your choosing, the drone will heal anyone nearby and will last for a duration of 6 hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Silence/Medicaldrone</iconPath>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>15000</durationTime>
+<castTime>120</castTime>
+<range>9.9</range>
+<radius>1.5</radius>
+<targetMode>Location</targetMode>
+<abilityClass>VEF.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SilenceSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_SilenceMedUpSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Building">
+<building>MedicaldroneSilenceSTNL</building>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>RaisedRock_Collapse</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Shining -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ShiningCreedSTNL</defName>
+<label>Creed</label>
+<description>ATK +67%; ATK SPD +20% to self.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Shining/Creed</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>12500</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_ShiningSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.20</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>CreedSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ShiningAutoprotectSTNL</defName>
+<label>Auto Protect</label>
+<description>This ability will slowly heal the target and grant them a barrier that lasts for 3 hours, the barrier will reduce incoming damage by 35%.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Shining/Autoprotect</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>7500</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_ShiningSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_ShiningCreedSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>AutoProtectSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ShiningCreedFieldSTNL</defName>
+<label>Creed Field</label>
+<description>Caster: ATK +40%. Allies: DEF +30%. Duration: 3 Hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Shining/Creedfield</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>7500</durationTime>
+<range>0</range>
+<radius>3.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_CreedField</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_ShiningSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.35</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_ShiningAutoprotectSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>CreedFieldSELFSTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Saileach -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_FocusSupportSTNL</defName>
+<label>Focus Support</label>
+<description>Restores the target's psyfocus for 2 hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Saileach/Focussupport</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5000</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SaileachSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>FocusSupportSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BannerSupportSTNL</defName>
+<label>Inheritance of Faith</label>
+<description>Allow targets in the area of effect to regenerate psyfocus and heal slightly for 2 hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Saileach/Inheritance</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5000</durationTime>
+<range>10.9</range>
+<targetMode>Location</targetMode>
+<radius>1.5</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>true</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SaileachSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.70</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_FocusSupportSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>FocusSupportHealSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BannerSlowSTNL</defName>
+<label>Glorious Banner</label>
+<description>Inflict enemies within the area of effect with a movement speed debuff which caps their SPD to 70%, additionally x2 stagger duration for 3 hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Saileach/GloriousBanner</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5000</durationTime>
+<range>10.9</range>
+<targetMode>Location</targetMode>
+<radius>4.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>true</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SaileachSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.70</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_BannerSupportSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_Hediff">
+        <hediff>SaileachDebuffSTNL</hediff>
+      </li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Kal'tsit -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_Mon3trSMNSTNL</defName>
+<label>Summon: Mon3tr</label>
+<description>Summon Mon3tr.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Kal'tsit/Pawn/Mon3tr/Mon3tr_east</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<range>10.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VPE_Arknights.Ability_SummonMon3tr</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_KaltsitSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.99</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_KalFortificationSTNL</defName>
+<label>Command: Structural Fortification</label>
+<description>Self: +50% DEF. Mon3tr: +30% DEF.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Kal'tsit/StructuralFortification</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>12500</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VPE_Arknights.Ability_KaltsitLogic</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_KaltsitSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.10</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_Mon3trSMNSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>KaltFortificationSTNL</li>
+</onCaster>
+<onTarget>
+<li>MontrFortificationSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_KalCoordinationSTNL</defName>
+<label>Command: Tactical Coordination</label>
+<description>Self: +60% ATK SPD, Mon3tr: +25% ATK.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Kal'tsit/Tactical</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>12500</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VPE_Arknights.Ability_KaltsitLogic</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_KaltsitSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.10</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_KalFortificationSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>KalCoordinationSTNL</li>
+</onCaster>
+<onTarget>
+<li>MontrCoordinationSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_KalMeltdownSTNL</defName>
+<label>Command: Meltdown</label>
+<description>Mon3tr: ATK x2, DEF +60%, HP Regen over time.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Kal'tsit/Meltdown</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>7500</durationTime>
+<range>8.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VPE_Arknights.Ability_KaltsitLogic</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_KaltsitSTNL</path>
+<level>4</level>
+<order>2</order>
+<psyfocusCost>0.49</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_KalCoordinationSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onTarget>
+<li>MontrMeltdownSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Crownslayer -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SmokeCrownSTNL</defName>
+<label>Smoke and Mirrors</label>
+<description>ATK +50%, 40% Melee dodge chance increase.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Crownslayer/Smoke</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_CrownslayerSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>CrownSmokeSTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_bombCrownSTNL</defName>
+<label>Smokebomb Blast</label>
+<description>Render any nearby ally invisible, including yourself for two hours.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Crownslayer/bomb</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<range>0</range>
+<durationTime>4460</durationTime>
+<targetMode>Self</targetMode>
+<radius>3.9</radius>
+ <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>false</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>true</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VPE_Arknights.Ability_Crownslayersmokepop</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_CrownslayerSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.29</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_SmokeCrownSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>HiddenCrownSTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ExeCrownSTNL</defName>
+<label>Smokescreen Execution</label>
+<description>Melee ATK +500%, SPD +25% and invisible until an attack is used or the duration runs out.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Crownslayer/Execution</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_CrownslayerSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.90</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_bombCrownSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>CrownExecutionSTNL</li>
+</onCaster>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>RaisedRock_Collapse</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Meteor -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_MeteorMarksmanSTNL</defName>
+<label>Marksman's proficiency</label>
+<description>Ranged ATK SPD +70%.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Meteor/Marksman</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MeteorSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.15</psyfocusCost>
+<entropyGain>0</entropyGain>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onTarget>
+<li>MarksmanSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ArmorbreakerSTNL</defName>
+<label>Armor Breaker</label>
+<description>Target: +30% Incoming DMG.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Meteor/Debuff</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>10.9</range>
+<targetMode>Pawn</targetMode>
+<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>false</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MeteorSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.15</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_MeteorMarksmanSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onTarget>
+<li>ArmorBreakerOneSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_ArmorbreakerBSTNL</defName>
+<label>Armor Breaker - Spread</label>
+<description>Target: +35% Incoming DMG. Stacks with the previous skill.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Meteor/DebuffAOE</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>10.9</range>
+<radius>1.5</radius>
+<targetMode>Location</targetMode>
+<hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_MeteorSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.15</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_ArmorbreakerSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onTarget>
+<li>ArmorBreakerTwoSTNL</li>
+</onTarget>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<!-- Ascalon -->
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_AscalonPursuitSTNL</defName>
+<label>Pursuit</label>
+<description>Enemies in range will suffer from 70% max movement speed and damage over time.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ascalon/Pursuit</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5500</durationTime>
+<range>0</range>
+<radius>1.5</radius>
+<targetMode>Self</targetMode>
+<hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<abilityClass>VPE_Arknights.Ability_Pursuit</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_AscalonSTNL</path>
+<level>1</level>
+<order>2</order>
+<psyfocusCost>0.08</psyfocusCost>
+<entropyGain>0</entropyGain>
+
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_AscalonEndowmentSTNL</defName>
+<label>Endowment</label>
+<description>Self: ATK +60%. Enemies: Movement SPD capped to 60% + Damage over time.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ascalon/Endowment</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5500</durationTime>
+<range>0</range>
+<radius>3.5</radius>
+<targetMode>Self</targetMode>
+<hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+	  <canTargetLocations>False</canTargetLocations>
+      <neverTargetIncapacitated>false</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+<abilityClass>VPE_Arknights.Ability_Endowment</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_AscalonSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_AscalonPursuitSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>VPE_AscalonEndowmentAllySTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_AscalonDescentSTNL</defName>
+<label>Descent</label>
+<description>Self: ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
+<iconPath>UI_ArknightsSTNL/Abilities/Ascalon/Descent</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>5500</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_AscalonSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.49</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_AscalonEndowmentSTNL</li>
+</prerequisites>
+</li>
+<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>DescentAscalonSTNL</li>
+</onCaster>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+</Defs>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="AnimalThingBase" Name="VPE_ConstructBaseMonstrSTNL" Abstract="True">
+		<thingClass>VanillaPsycastsExpanded.Technomancer.Pawn_Construct</thingClass>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0</Flammability>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+			<ArmorRating_Heat>2.00</ArmorRating_Heat>
+		</statBases>
+		<uiIconScale>1.5</uiIconScale>
+		<tradeTags>
+			<li>NonContractable</li>
+		</tradeTags>
+		<race>
+		<baseHealthScale>2</baseHealthScale>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+			<canReleaseToWild>false</canReleaseToWild>
+			<trainability>Advanced</trainability>
+			<showTrainables>false</showTrainables>
+			<playerCanChangeMaster>false</playerCanChangeMaster>
+			<hideTrainingTab>true</hideTrainingTab>
+			<wildness>0</wildness>
+			<useMeatFrom>Pig</useMeatFrom>
+			<petness>0</petness>
+			<hediffGiverSets Inherit="False"/>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+
+	</ThingDef>
+	<!-- Mon3tr -->
+	<ThingDef ParentName="VPE_ConstructBaseMonstrSTNL">
+		<defName>VPE_MontrSTNL</defName>
+		<label>Mon3tr</label>
+		<description>Mon3tr</description>
+		<statBases>
+			<ComfyTemperatureMin>-2200</ComfyTemperatureMin>
+			<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+			<MarketValue>150</MarketValue>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+			<MoveSpeed>4.6</MoveSpeed>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>VPE_NoPain</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_DiseaseImmunity">
+				<hediffsToRemove><li>Animal_Plague</li><li>Animal_Flu</li><li>AB_AnimalSporesAllergy</li></hediffsToRemove>
+				<tickInterval>2000</tickInterval>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_DiseaseEventImmunity">
+				
+			</li>
+			<li Class="CompProperties_EffecterOnDeath">
+<effecterDef>MetalhorrorDeath</effecterDef>
+</li>
+		</comps>
+		<race>
+			<bloodDef>VPE_Filth_Metal</bloodDef>
+			<body>VPE_MetalConstructBody</body>
+			<fleshType>VPE_SteelConstructFlesh</fleshType>
+			<lifeStageAges>
+				<li>
+					<minAge>0</minAge>
+					<def>AnimalAdult</def>
+					<soundAngry>VPE_Pawn_SteelConstruct_Angry</soundAngry>
+					<soundWounded>VPE_Pawn_SteelConstruct_Wounded</soundWounded>
+					<soundDeath>VPE_Pawn_SteelConstruct_Death</soundDeath>
+					<soundCall>VPE_Pawn_SteelConstruct_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>
+				<min>12000</min>
+				<max>20000</max>
+			</soundCallIntervalRange>
+			<hasCorpse>false</hasCorpse>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VPE_MontrSTNL</defName>
+		<label>Mon3tr</label>
+		<race>VPE_MontrSTNL</race>
+		<combatPower>100</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>UI_ArknightsSTNL/Abilities/Kal'tsit/Pawn/Mon3tr/Mon3tr</texPath>
+					<drawSize>2</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

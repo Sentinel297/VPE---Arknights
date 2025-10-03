@@ -1,0 +1,1140 @@
+<Defs>
+
+<!-- Wisadel -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>RevenantInvisWisadelSTNL</defName>
+<defaultLabelColor>(1,0.3, 0.3)</defaultLabelColor>
+<label>Camouflage</label>
+<description>This creature is psychically twisting the perceptions of humans, animals, and machines in the vicinity in such a way as to seem invisible. The eye receives their image as normal but the mind cannot perceive it.</description>
+<isBad>false</isBad>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_Invisibility">
+<visibleToPlayer>true</visibleToPlayer>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Civilight Eterna -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>PastlingeringSTNL</defName>
+<defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+<label>The Past Lingering</label>
+<description>-50% Stagger duration, -20% Incoming damage.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statFactors>
+<StaggerDurationFactor>0.5</StaggerDurationFactor>
+<IncomingDamageFactor>0.80</IncomingDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>InspirationSTNL</defName>
+<defaultLabelColor>(0.7, 0.7, 0.7)</defaultLabelColor>
+<label>Inspiration</label>
+<description>+50% ATK</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>0.50</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.50</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>DiscouragementSTNL</defName>
+<defaultLabelColor>(1, 0.5, 0.5)</defaultLabelColor>
+<label>Discouragement</label>
+<description>-50% Outgoing damage , +100% Incoming damage.</description>
+<isBad>true</isBad>
+<stages>
+<li>
+<statFactors>
+<IncomingDamageFactor>2</IncomingDamageFactor>
+<VEF_MeleeAttackDamageFactor>0.50</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.50</VEF_RangeAttackDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>RegenerationSTNL</defName>
+<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+<label>Regeneration</label>
+<description>This creature is being healed by Arts.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>100</regeneration>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>StagnationSTNL</defName>
+<defaultLabelColor>(0.3, 0.3, 0.3)</defaultLabelColor>
+<label>Stagnation</label>
+<description>This creature is being corrupted by Arts, causing them to lose the ability to heal from their wounds.</description>
+<isBad>true</isBad>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.70</setMax>
+</li>
+</capMods>
+<naturalHealingFactor>0</naturalHealingFactor>
+<regeneration>-999999999999</regeneration>
+<statFactors>
+<ImmunityGainSpeedFactor>0</ImmunityGainSpeedFactor>
+<InjuryHealingFactor>0</InjuryHealingFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Guardmiya -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>FleetingNightSTNL</defName>
+<defaultLabelColor>(1, 0.7, 0.7)</defaultLabelColor>
+<label>Ying Xiao - Fleeting Night</label>
+<description>This pawn is currently in the Fleeting Night state, granting them increased ATK, ATK SPD and DEF.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackSpeedFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1</VEF_MeleeAttackSpeedFactor>
+</statOffsets>
+<statFactors>
+<VEF_MeleeAttackDamageFactor>1.50</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>1.50</VEF_RangeAttackDamageFactor>
+<StaggerDurationFactor>0.5</StaggerDurationFactor>
+<IncomingDamageFactor>0.90</IncomingDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>ShadowlessSTNL</defName>
+<defaultLabelColor>(1, 0.5, 0.5)</defaultLabelColor>
+<label>Ying Xiao - Shadowless</label>
+<isBad>false</isBad>
+<description>This pawn is currently in the Shadowless state, allowing them to deal twice as much melee damage.</description>
+<stages>
+<li>
+<statFactors>
+<VEF_MeleeAttackDamageFactor>2</VEF_MeleeAttackDamageFactor>
+</statFactors>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>UI_ArknightsSTNL/Abilities/AmiyaGuard/Boost/Boost</li>
+		</texPaths>
+        <overrideMeshSize>(2.25, 2.25)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0.10)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0.10)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+</renderNodeProperties>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>WrathSTNL</defName>
+<defaultLabelColor>(0.5, 0.5, 1)</defaultLabelColor>
+<label>Wrathful Cerulean Flame</label>
+<description>This pawn is currently being enhanced by the wrath of the cerulean flame, Granting them increased combat capabilities.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statFactors>
+<StaggerDurationFactor>0.5</StaggerDurationFactor>
+<IncomingDamageFactor>0.86</IncomingDamageFactor>
+<VEF_MeleeAttackDamageFactor>1.14</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>1.14</VEF_RangeAttackDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Ines -->
+
+<HediffDef ParentName="PsycastHediffBase">
+<defName>VPE_InesArtsDOTSTNL</defName>
+<label>Arts damage over time</label>
+<description>This creature is taking damage over time.</description>
+<isBad>true</isBad>
+<makesSickThought>true</makesSickThought>
+<hediffClass>VPE_Arknights.Hediff_ArtsDOTInes</hediffClass>
+<stages>
+<li>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Effecter">
+<stateEffecter>VPE_Liferot</stateEffecter>
+</li>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MurkyNightSTNL</defName>
+<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
+<label>Murky Night</label>
+<description>This creature is psychically twisting the perceptions of humans, animals, and machines in the vicinity in such a way as to seem invisible. The eye receives their image as normal but the mind cannot perceive it.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_Invisibility">
+<visibleToPlayer>true</visibleToPlayer>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>SolitaryReturnBuffSTNL</defName>
+<defaultLabelColor>(0.7,0.7, 0.7)</defaultLabelColor>
+<label>Solitary Return</label>
+<description>This pawn is being enhanced by the solitary return ability.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>1.10</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>1.10</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Mudrock -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>DEFupmudSTNL</defName>
+<defaultLabelColor>(0.8, 0.8, 0)</defaultLabelColor>
+<label>DEF UP</label>
+<description>+60% Def</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statFactors>
+<IncomingDamageFactor>0.40</IncomingDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>RegenerationMudrockSTNL</defName>
+<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+<label>Crag Splitter</label>
+<description>This creature is being healed by Arts.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>1600</regeneration>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>DesecratedSTNL</defName>
+<defaultLabelColor>(0.3, 0.3, 0.3)</defaultLabelColor>
+<label>Desecrated Earth</label>
+<description>This creature is being slowed down by Arts.</description>
+<isBad>true</isBad>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.20</setMax>
+</li>
+</capMods>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MudrockGodmodeSTNL</defName>
+<defaultLabelColor>(0.8, 0.8, 0)</defaultLabelColor>
+<label>Bloodline of Desecrated Earth</label>
+<description>Immune to damage and stagger.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statFactors>
+<IncomingDamageFactor>0</IncomingDamageFactor>
+<StaggerDurationFactor>0</StaggerDurationFactor>
+<Flammability>0</Flammability>
+</statFactors>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>UI_ArknightsSTNL/Abilities/Mudrock/Shield/Barrier</li>
+		</texPaths>
+        <overrideMeshSize>(2, 2)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0.10)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0.10)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+</renderNodeProperties>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Silence -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>SilencePassiveSTNL</defName>
+<defaultLabelColor>(0.6, 0.6, 1)</defaultLabelColor>
+<label>Booster Injection</label>
+<description>This pawn possesses faster healing speed due to being a Silence path user.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<naturalHealingFactor>1.25</naturalHealingFactor>
+<statFactors>
+<ImmunityGainSpeedFactor>1.5</ImmunityGainSpeedFactor>
+<InjuryHealingFactor>1.25</InjuryHealingFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>HealingupsilenceSTNL</defName>
+<defaultLabelColor>(0.4, 0.4, 1)</defaultLabelColor>
+<label>Healing Up</label>
+<description>This creature is being healed by Arts.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<naturalHealingFactor>3</naturalHealingFactor>
+<statFactors>
+<ImmunityGainSpeedFactor>2</ImmunityGainSpeedFactor>
+<InjuryHealingFactor>2</InjuryHealingFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>SilenceDroneHealSTNL</defName>
+<defaultLabelColor>(0.5, 0.5, 1)</defaultLabelColor>
+<label>Drone Healing</label>
+<description>This creature is being healed by a nearby medical drone.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>150</regeneration>
+<naturalHealingFactor>1.5</naturalHealingFactor>
+<statFactors>
+<ImmunityGainSpeedFactor>1.5</ImmunityGainSpeedFactor>
+<InjuryHealingFactor>1.5</InjuryHealingFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>false</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Shining -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>CreedSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Creed</label>
+<description>ATK +67%; ATK SPD +20%.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackSpeedFactor>0.20</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.20</VEF_RangeAttackSpeedFactor>
+<VEF_MeleeAttackDamageFactor>0.67</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.67</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>AutoProtectSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Barrier</label>
+<description>-35% Incoming damage + Healing.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>100</regeneration>
+<statOffsets>
+<IncomingDamageFactor>-0.65</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>UI_ArknightsSTNL/Abilities/Shining/Barrier/Barrier</li>
+		</texPaths>
+        <overrideMeshSize>(1.75, 1.75)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0.10)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0.10)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+</renderNodeProperties>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>CreedFieldSELFSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Creed Field</label>
+<description>ATK +40%.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>0.40</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.40</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>CreedFieldOtherSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Creed Field</label>
+<description>Incoming DMG -30%.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<IncomingDamageFactor>-0.30</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>UI_ArknightsSTNL/Abilities/Shining/Barrier/Barrier</li>
+		</texPaths>
+        <overrideMeshSize>(1.75, 1.75)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0.10)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0.10)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>7500</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Saileach -->
+
+<HediffDef>
+  <defName>FocusSupportSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Focus Support</label>
+<description>This pawn is regenerating psyfocus.</description>
+<isBad>false</isBad>
+  <hediffClass>HediffWithComps</hediffClass>
+  <comps>
+    <li Class="VPE_Arknights.HediffCompProperties_PsyfocusRegen"/>
+	<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>7500</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+	</comps>
+</HediffDef>
+
+<HediffDef>
+  <defName>FocusSupportHealSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Inheritance of Faith</label>
+<description>This pawn is regenerating psyfocus and is getting healed by a Saileach path user.</description>
+<isBad>false</isBad>
+  <hediffClass>HediffWithComps</hediffClass>
+  <stages>
+<li>
+<regeneration>50</regeneration>
+</li>
+</stages>
+  <comps>
+    <li Class="VPE_Arknights.HediffCompProperties_PsyfocusRegen"/>
+	<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>7500</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+	</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>SaileachDebuffSTNL</defName>
+<defaultLabelColor>(0.3, 0.3, 0.3)</defaultLabelColor>
+<label>Glorious Banner</label>
+<description>This creature is being slowed down and has twice the stagger factor.</description>
+<isBad>true</isBad>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.70</setMax>
+</li>
+</capMods>
+<statFactors>
+<StaggerDurationFactor>2</StaggerDurationFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Kal'tsit -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>KaltFortificationSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Command: Structural Fortification</label>
+<description>Incoming DMG -50%.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<IncomingDamageFactor>-0.50</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>7500</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MontrFortificationSTNL</defName>
+<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+<label>Command: Structural Fortification</label>
+<description>Incoming DMG -30%.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<IncomingDamageFactor>-0.30</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>7500</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>KalCoordinationSTNL</defName>
+<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
+<label>Command: Tactical Coordination</label>
+<description>+60% ATK SPD.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackSpeedFactor>0.60</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.60</VEF_RangeAttackSpeedFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MontrCoordinationSTNL</defName>
+<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
+<label>Command: Tactical Coordination</label>
+<description>+25% ATK.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statFactors>
+<VEF_MeleeAttackDamageFactor>1.25</VEF_MeleeAttackDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MontrMeltdownSTNL</defName>
+<defaultLabelColor>(1,0.3, 0.3)</defaultLabelColor>
+<label>Command: Meltdown</label>
+<description>Mon3tr is currently under the Meltdown status. ATK x2, DEF +60%, HP Regen over time.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>500</regeneration>
+<statFactors>
+<VEF_MeleeAttackDamageFactor>2</VEF_MeleeAttackDamageFactor>
+<IncomingDamageFactor>0.40</IncomingDamageFactor>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Crownslayer -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>CrownSmokeSTNL</defName>
+<defaultLabelColor>(0.7, 0.2, 0.2)</defaultLabelColor>
+<label>Smoke and Mirrors</label>
+<description>ATK +50%, 40% Melee dodge chance increase.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>0.50</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.50</VEF_RangeAttackDamageFactor>
+</statOffsets>
+<statFactors>
+<MeleeDodgeChance>1.40</MeleeDodgeChance>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>HiddenCrownSTNL</defName>
+<defaultLabelColor>(0.7,0.3, 0.3)</defaultLabelColor>
+<label>Smokebomb Blast</label>
+<description>This creature is temporarily invisible.</description>
+<isBad>false</isBad>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>4460</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_Invisibility">
+<visibleToPlayer>true</visibleToPlayer>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>CrownExecutionSTNL</defName>
+<defaultLabelColor>(0.7, 0.2, 0.2)</defaultLabelColor>
+<label>Execution</label>
+<description>Melee ATK +500% SPD +25%, invisible until an attack is used or the duration runs out.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>5</VEF_MeleeAttackDamageFactor>
+</statOffsets>
+<statFactors>
+<MoveSpeed>1.25</MoveSpeed>
+</statFactors>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>10000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_Invisibility">
+<visibleToPlayer>true</visibleToPlayer>
+</li>
+<li>
+<compClass>VanillaPsycastsExpanded.Nightstalker.HediffComp_DissapearsOnAttack</compClass>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Meteor -->
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>MarksmanSTNL</defName>
+<defaultLabelColor>(1,1,1)</defaultLabelColor>
+<label>Marksman's Proficiency</label>
+<description>+70% Ranged ATK SPD</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<VEF_RangeAttackSpeedFactor>0.70</VEF_RangeAttackSpeedFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>ArmorBreakerOneSTNL</defName>
+<defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+<label>Armor Breaker</label>
+<description>+30% Incoming DMG.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<IncomingDamageFactor>0.30</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>ArmorBreakerTwoSTNL</defName>
+<defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+<label>Armor Breaker - Spread</label>
+<description>+35% Incoming DMG.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<statOffsets>
+<IncomingDamageFactor>0.35</IncomingDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+
+<!-- Ascalon -->
+
+<HediffDef ParentName="EndowmentBaseSTNL">
+<defName>VPE_AscalonArtsDOTSTNL</defName>
+<defaultLabelColor>(0.7, 0, 0.7)</defaultLabelColor>
+<label>Pursuit</label>
+<description>This creature is taking damage over time and is being slowed down.</description>
+<makesSickThought>true</makesSickThought>
+<isBad>true</isBad>
+<hediffClass>VPE_Arknights.Hediff_ArtsDOTAscalon</hediffClass>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.70</setMax>
+</li>
+</capMods>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Effecter">
+<stateEffecter>VPE_Liferot</stateEffecter>
+</li>
+</comps>
+</HediffDef>
+
+<HediffDef ParentName="PsycastHediffBase">
+<defName>VPE_AscalonEndowmentAllySTNL</defName>
+<defaultLabelColor>(1, 0, 1)</defaultLabelColor>
+<label>Endowment</label>
+<description>ATK +60%.</description>
+<makesSickThought>false</makesSickThought>
+<isBad>false</isBad>
+<hediffClass>HediffWithComps</hediffClass>
+<stages>
+<li>
+<statOffsets>
+<VEF_MeleeAttackDamageFactor>0.60</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.60</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+</HediffDef>
+
+  <HediffDef Name="EndowmentBaseSTNL" Abstract = "True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+	  <disappearsAfterTicks>5500</disappearsAfterTicks>
+        <showRemainingTime>True</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
+  </HediffDef>
+
+<HediffDef ParentName="EndowmentBaseSTNL">
+<defName>VPE_AscalonEndowmentEnemySTNL</defName>
+<defaultLabelColor>(0.5, 0, 0.5)</defaultLabelColor>
+<label>Endowment</label>
+<description>60% SPD cap and takes damage over time.</description>
+<isBad>true</isBad>
+<makesSickThought>true</makesSickThought>
+<hediffClass>VPE_Arknights.Hediff_ArtsDOTAscalon</hediffClass>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.60</setMax>
+</li>
+</capMods>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Effecter">
+<stateEffecter>VPE_Liferot</stateEffecter>
+</li>
+</comps>
+</HediffDef>
+
+<HediffDef>
+<hediffClass>HediffWithComps</hediffClass>
+<defName>DescentAscalonSTNL</defName>
+<defaultLabelColor>(0.9,0, 0.9)</defaultLabelColor>
+<label>Descent</label>
+<description>ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
+<isBad>false</isBad>
+<stages>
+<li>
+<regeneration>100</regeneration>
+<statOffsets>
+<MeleeDodgeChance>0.30</MeleeDodgeChance>
+<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
+<VEF_MeleeAttackDamageFactor>0.20</VEF_MeleeAttackDamageFactor>
+<VEF_RangeAttackDamageFactor>0.20</VEF_RangeAttackDamageFactor>
+</statOffsets>
+</li>
+</stages>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>true</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+</HediffDef>
+</Defs>

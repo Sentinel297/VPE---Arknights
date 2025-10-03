@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_WisadelSTNL</defName>
+    <label>Wis'adel</label>
+    <description>Learn to use the skills of Wis'adel.</description>
+    <background>UI_WisadelSTNL/Tree/Wisadeltreebase</background>
+    <altBackground>UI_WisadelSTNL/Tree/Wisadeltreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of W.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_WSTNL</defName>
+    <label>W</label>
+    <description>Learn to use the skills of W.</description>
+    <background>UI_ArknightsSTNL/Tree/Wtreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Wtreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of W.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+   <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_EternaSTNL</defName>
+    <label>Civilight Eterna</label>
+    <description>Learn to use the skills of Civilight Eterna.</description>
+    <background>UI_ArknightsSTNL/Tree/Eternatreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Eternatreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Civilight Eterna.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_GuardmiyaSTNL</defName>
+    <label>Amiya (Guard)</label>
+    <description>Learn to use the skills of Amiya's guard form.</description>
+    <background>UI_ArknightsSTNL/Tree/Guardmiyatreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Guardmiyatreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Amiya's guard form.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_InesSTNL</defName>
+    <label>Ines</label>
+    <description>Learn to use Ines' skills.</description>
+    <background>UI_ArknightsSTNL/Tree/Inestreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Inestreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use Ines' skills.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+   <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_MudrockSTNL</defName>
+    <label>Mudrock</label>
+    <description>Learn to use the skills of Mudrock.</description>
+    <background>UI_ArknightsSTNL/Tree/Mudrocktreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Mudrocktreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Mudrock.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_SilenceSTNL</defName>
+    <label>Silence</label>
+    <description>Learn to use the skills of Silence.</description>
+    <background>UI_ArknightsSTNL/Tree/Silencetreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Silencetreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Silence.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_ShiningSTNL</defName>
+    <label>Shining</label>
+    <description>Learn to use the skills of Shining.</description>
+    <background>UI_ArknightsSTNL/Tree/Shiningtreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Shiningtreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Shining.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_SaileachSTNL</defName>
+    <label>Saileach</label>
+    <description>Learn to use the skills of Saileach.</description>
+    <background>UI_ArknightsSTNL/Tree/Saileachtreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Saileachtreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Saileach.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_KaltsitSTNL</defName>
+    <label>Kal'tsit</label>
+    <description>Learn to use the skills of Kal'tsit and Mon3tr.</description>
+    <background>UI_ArknightsSTNL/Tree/Kaltreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Kaltreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Kal'tsit and Mon3tr.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+   <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_CrownslayerSTNL</defName>
+    <label>Crownslayer</label>
+    <description>Learn to use the skills of Crownslayer.</description>
+    <background>UI_ArknightsSTNL/Tree/slayertreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/slayertreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Crownslayer.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_MeteorSTNL</defName>
+    <label>Meteor</label>
+    <description>Learn to use the skills of Meteor.</description>
+    <background>UI_ArknightsSTNL/Tree/Meteortreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Meteortreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Meteor.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_AscalonSTNL</defName>
+    <label>Ascalon</label>
+    <description>Learn to use the skills of Ascalon.</description>
+    <background>UI_ArknightsSTNL/Tree/Ascalontreebase</background>
+    <altBackground>UI_ArknightsSTNL/Tree/Ascalontreebase</altBackground>
+    <tab>Arknights</tab>
+    <tooltip>Learn to use the skills of Ascalon.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+</Defs>

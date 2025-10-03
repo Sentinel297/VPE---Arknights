@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <SoundDef>
+    <defName>Psycast_DawnShotSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Psycast_ExplosiveDawnShot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+    <SoundDef>
+    <defName>Psycast_DawnShotExploSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Explodawnexplo</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>BasicAttackWalterSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>BasicAttackWalter</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  
+  <SoundDef>
+    <defName>PastlingeringSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pastlingering</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>FutureelusiveSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Futureelusive</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>PresentreconstructedSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Presentreconstructed</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+<SoundDef>
+    <defName>ShadowlessSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Shadowless</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>FleetingNightSTNL</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FleetingNight</clipPath>
+          </li>
+        </grains>
+        <volumeRange>125</volumeRange>
+        <distRange>20~50</distRange>
+      </li>
+    </subSounds>
+	</SoundDef>
+</Defs>

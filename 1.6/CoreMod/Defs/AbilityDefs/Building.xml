@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>	
+  <ThingDef ParentName="BuildingBase" Name="AutocannonTurretSTNL" Abstract="True"> 
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Revenantshadow/Revenantshadow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <drawOffset>(0,0,0.15)</drawOffset>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0,0,0)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>    
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>100</Mass>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretTopDrawSize>2.7</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <uiIconScale>0.95</uiIconScale>
+  </ThingDef>
+
+  <ThingDef ParentName="AutocannonTurretSTNL">
+    <defName>Turret_RevenantSTNL</defName>
+    <label>Revenant Shadow</label>
+    <description>A shadow summoned by a Wis'adel psycast user, will disappear after 5 hours.</description>
+    <uiIconPath>Things/Revenantshadow/Revenantshadow</uiIconPath>
+    <statBases>
+      <ShootingAccuracyTurret>9999</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
+    </statBases>
+    <costList>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+	  <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>12500</delayTicks>
+      </li>
+    </comps>
+    <building>
+      <turretGunDef>Gun_RevenantTurretSTNL</turretGunDef>
+      <turretBurstCooldownTime>3</turretBurstCooldownTime>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_RevenantShot</defName>
+    <label>Revenant shell</label>
+    <graphicData>
+      <texPath>Things/RevenantShot/Revenantshot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <speed>88</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_RevenantTurretSTNL</defName>
+    <label>Revenant Shadow</label>
+    <description>A self-loading large-bore cannon designed to attach to a turret.</description>
+    <graphicData>
+      <texPath>Things/Revenantshadow/None</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.28</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_RevenantShot</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>0</minRange>
+        <range>32.9</range>
+        <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>BasicAttackWalterSTNL</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef> 
+  
+  <!-- W -->
+  
+  <ThingDef Name="TrapIEDBaseWSTNL" ParentName="BuildingBase" Abstract="True">
+<thingClass>Building_TrapExplosive</thingClass>
+<graphicData>
+<graphicClass>Graphic_Single</graphicClass>
+<damageData>
+<rect>(0.1,0,0.8,0.3)</rect>
+</damageData>
+</graphicData>
+<uiIconOffset>(0,-0.14)</uiIconOffset>
+<altitudeLayer>Building</altitudeLayer>
+<rotatable>false</rotatable>
+<tickerType>Normal</tickerType>
+<stealable>false</stealable>
+<minifiedDef>MinifiedThing</minifiedDef>
+<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+<uiOrder>40</uiOrder>
+<thingCategories>
+<li>BuildingsSecurity</li>
+</thingCategories>
+<statBases>
+<Mass>2</Mass>
+<MaxHitPoints>40</MaxHitPoints>
+<WorkToBuild>1400</WorkToBuild>
+<Flammability>1</Flammability>
+<Beauty>-4</Beauty>
+<TrapSpringChance>1.0</TrapSpringChance>
+</statBases>
+<building>
+<isTrap>true</isTrap>
+<trapPeacefulWildAnimalsSpringChanceFactor>1</trapPeacefulWildAnimalsSpringChanceFactor>
+<expandHomeArea>false</expandHomeArea>
+<ai_chillDestination>false</ai_chillDestination>
+</building>
+<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+</ThingDef>
+  
+  <ThingDef ParentName="TrapIEDBaseWSTNL">
+<defName>TrapIED_WSTNL</defName>
+<label>Mine</label>
+<description>A pair of high-explosive shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+<graphicData>
+<texPath>UI_ArknightsSTNL/Abilities/W/WmineSTNL</texPath>
+<drawSize>(0.5, 0.5)</drawSize>
+</graphicData>
+<costList>
+</costList>
+<designationHotKey>Misc7</designationHotKey>
+<comps>
+<li Class="CompProperties_Explosive">
+<explosiveRadius>2.9</explosiveRadius>
+<explosiveDamageType>Bomb</explosiveDamageType>
+<startWickHitPointsPercent>0.9</startWickHitPointsPercent>
+<wickTicks>15</wickTicks>
+<startWickOnDamageTaken>
+<li>Bullet</li>
+<li>Arrow</li>
+<li>ArrowHighVelocity</li>
+</startWickOnDamageTaken>
+</li>
+</comps>
+<specialDisplayRadius>3.9</specialDisplayRadius>
+</ThingDef>
+
+<!-- Ines -->
+
+<HediffDef>
+<defName>SlowedInesSTNL</defName>
+<label>Shadow Snare</label>
+<description>This creature is being slowed down by a shadow sentry.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+<comps>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>30</disappearsAfterTicks>
+<showRemainingTime>false</showRemainingTime>
+</li>
+<li Class="HediffCompProperties_DisappearsOnDeath"/>
+</comps>
+<stages>
+<li>
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<setMax>0.35</setMax>
+</li>
+</capMods>
+</li>
+</stages>
+<isBad>false</isBad>
+</HediffDef>
+<ThingDef ParentName="BuildingBase">
+<defName>ShadowSentrySTNL</defName>
+<label>Shadow Sentry</label>
+<description>A shadow sentry, it will slow down anyone passing nearby.</description>
+<tickerType>Normal</tickerType>
+<drawerType>RealtimeOnly</drawerType>
+<fillPercent>0</fillPercent>
+<graphicData>
+<texPath>UI_ArknightsSTNL/Abilities/Ines/SolitaryreturnThing</texPath>
+<graphicClass>Graphic_Single</graphicClass>
+<drawSize>(1.5,1.5)</drawSize>
+<shadowData>
+<volume>(0, 0, 0)</volume>
+<offset>(0, 0, -0.2)</offset>
+</shadowData>
+</graphicData>
+<altitudeLayer>Building</altitudeLayer>
+<passability>PassThroughOnly</passability>
+<building>
+<ai_chillDestination>false</ai_chillDestination>
+<buildingTags>
+<li>Biotech</li>
+</buildingTags>
+</building>
+<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+<uiOrder>2420</uiOrder>
+<minifiedDef>MinifiedThing</minifiedDef>
+<rotatable>false</rotatable>
+<thingCategories>
+<li>BuildingsMisc</li>
+</thingCategories>
+<statBases>
+<MaxHitPoints>150</MaxHitPoints>
+<WorkToBuild>8000</WorkToBuild>
+<Mass>25</Mass>
+<Flammability>0</Flammability>
+</statBases>
+<size>(1,1)</size>
+<costList>
+</costList>
+<comps>
+<li Class="CompProperties_CauseHediff_AoE">
+<range>2.5</range>
+<onlyTargetMechs>false</onlyTargetMechs>
+<hediff>SlowedInesSTNL</hediff>
+</li>
+ <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>6000</delayTicks>
+      </li>
+</comps>
+<placeWorkers>
+<li>PlaceWorker_ShowCauseHediffAoE</li>
+</placeWorkers>
+<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+</ThingDef>
+
+<!-- Silence -->
+
+<ThingDef ParentName="BuildingBase">
+<defName>MedicaldroneSilenceSTNL</defName>
+<label>Medical Drone</label>
+<description>A remote medical device. Anyone passing nearby will get healed.</description>
+<tickerType>Normal</tickerType>
+<drawerType>RealtimeOnly</drawerType>
+<fillPercent>0</fillPercent>
+<graphicData>
+<texPath>UI_ArknightsSTNL/Abilities/Silence/MedicalThing</texPath>
+<graphicClass>Graphic_Single</graphicClass>
+<drawSize>(1,1)</drawSize>
+<shadowData>
+<volume>(0, 0, 0)</volume>
+<offset>(0, 0, -0.2)</offset>
+</shadowData>
+</graphicData>
+<altitudeLayer>Building</altitudeLayer>
+<passability>PassThroughOnly</passability>
+<building>
+<ai_chillDestination>false</ai_chillDestination>
+<buildingTags>
+<li>Biotech</li>
+</buildingTags>
+</building>
+<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+<uiOrder>2420</uiOrder>
+<minifiedDef>MinifiedThing</minifiedDef>
+<rotatable>false</rotatable>
+<thingCategories>
+<li>BuildingsMisc</li>
+</thingCategories>
+<statBases>
+<MaxHitPoints>150</MaxHitPoints>
+<WorkToBuild>8000</WorkToBuild>
+<Mass>25</Mass>
+<Flammability>0</Flammability>
+</statBases>
+<size>(1,1)</size>
+<costList>
+</costList>
+<comps>
+<li Class="CompProperties_CauseHediff_AoE">
+<range>1.5</range>
+<onlyTargetMechs>false</onlyTargetMechs>
+<hediff>SilenceDroneHealSTNL</hediff>
+</li>
+ <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>15000</delayTicks>
+      </li>
+</comps>
+<placeWorkers>
+<li>PlaceWorker_ShowCauseHediffAoE</li>
+</placeWorkers>
+<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+</ThingDef>
+</Defs>
