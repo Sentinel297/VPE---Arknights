@@ -161,7 +161,7 @@
 <stages>
 <li>
 <statOffsets>
-<MeleeCooldownFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1</MeleeCooldownFactor>
+<VEF_MeleeAttackSpeedFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1</VEF_MeleeAttackSpeedFactor>
 </statOffsets>
 <statFactors>
 <VEF_MeleeAttackDamageFactor>1.50</VEF_MeleeAttackDamageFactor>
@@ -289,8 +289,8 @@
 <stages>
 <li>
 <statOffsets>
-<MeleeCooldownFactor>0.50</MeleeCooldownFactor>
-<RangedCooldownFactor>0.50</RangedCooldownFactor>
+<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
 </statOffsets>
 </li>
 </stages>
@@ -543,8 +543,8 @@
 <stages>
 <li>
 <statOffsets>
-<MeleeCooldownFactor>0.20</MeleeCooldownFactor>
-<RangedCooldownFactor>0.20</RangedCooldownFactor>
+<VEF_MeleeAttackSpeedFactor>0.20</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.20</VEF_RangeAttackSpeedFactor>
 <VEF_MeleeAttackDamageFactor>0.67</VEF_MeleeAttackDamageFactor>
 <VEF_RangeAttackDamageFactor>0.67</VEF_RangeAttackDamageFactor>
 </statOffsets>
@@ -816,8 +816,8 @@
 <stages>
 <li>
 <statOffsets>
-<MeleeCooldownFactor>0.60</MeleeCooldownFactor>
-<RangedCooldownFactor>0.60</RangedCooldownFactor>
+<VEF_MeleeAttackSpeedFactor>0.60</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.60</VEF_RangeAttackSpeedFactor>
 </statOffsets>
 </li>
 </stages>
@@ -970,7 +970,7 @@
 <stages>
 <li>
 <statOffsets>
-<RangedCooldownFactor>0.70</RangedCooldownFactor>
+<VEF_RangeAttackSpeedFactor>0.70</VEF_RangeAttackSpeedFactor>
 </statOffsets>
 </li>
 </stages>
@@ -1122,8 +1122,8 @@
 <regeneration>100</regeneration>
 <statOffsets>
 <MeleeDodgeChance>0.30</MeleeDodgeChance>
-<MeleeCooldownFactor>0.50</MeleeCooldownFactor>
-<RangedCooldownFactor>0.50</RangedCooldownFactor>
+<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
+<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
 <VEF_MeleeAttackDamageFactor>0.20</VEF_MeleeAttackDamageFactor>
 <VEF_RangeAttackDamageFactor>0.20</VEF_RangeAttackDamageFactor>
 </statOffsets>
