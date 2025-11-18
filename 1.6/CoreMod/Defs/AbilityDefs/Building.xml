@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>	
-  <ThingDef ParentName="BuildingBase" Name="AutocannonTurretSTNL" Abstract="True"> 
-    <thingClass>Building_TurretGun</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <graphicData>
-      <texPath>Things/Revenantshadow/Revenantshadow</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.5, 1.5)</drawSize>
-      <drawOffset>(0,0,0.15)</drawOffset>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
-      <shadowData>
-        <volume>(0,0,0)</volume>
-        <offset>(0,0,-0.05)</offset>
-      </shadowData>
-    </graphicData>    
-    <altitudeLayer>Building</altitudeLayer>
-    <stealable>false</stealable>
-    <rotatable>false</rotatable>
-    <size>(1,1)</size>
-    <statBases>
-      <MaxHitPoints>380</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <WorkToBuild>15000</WorkToBuild>
-      <Mass>100</Mass>
-      <Beauty>-20</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <fillPercent>0.5</fillPercent>
-    <hasTooltip>true</hasTooltip>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-    <building>
-      <ai_combatDangerous>true</ai_combatDangerous>
-      <turretTopDrawSize>2.7</turretTopDrawSize>
-      <turretTopOffset>(0, 0.05)</turretTopOffset>
-    </building>
-    <placeWorkers>
-      <li>PlaceWorker_ShowTurretRadius</li>
-    </placeWorkers>
-<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-    <uiIconScale>0.95</uiIconScale>
-  </ThingDef>
+<ThingDef ParentName="BuildingBase" Name="AutocannonTurretSTNL" Abstract="True">
+	<thingClass>Building_TurretGun</thingClass>
+	<drawerType>MapMeshAndRealTime</drawerType>
+	<graphicData>
+		<texPath>Things/Revenantshadow/Revenantshadow</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1.5, 1.5)</drawSize>
+		<drawOffset>(0,0,0.15)</drawOffset>
+		<damageData>
+			<rect>(0.2,0.2,0.6,0.6)</rect>
+		</damageData>
+		<shadowData>
+			<volume>(0,0,0)</volume>
+			<offset>(0,0,-0.05)</offset>
+		</shadowData>
+	</graphicData>
+	<altitudeLayer>Building</altitudeLayer>
+	<stealable>false</stealable>
+	<rotatable>false</rotatable>
+	<size>(1,1)</size>
+	<statBases>
+		<MaxHitPoints>380</MaxHitPoints>
+		<Flammability>0</Flammability>
+		<WorkToBuild>15000</WorkToBuild>
+		<Mass>100</Mass>
+		<Beauty>-20</Beauty>
+	</statBases>
+	<tickerType>Normal</tickerType>
+	<passability>PassThroughOnly</passability>
+	<pathCost>50</pathCost>
+	<fillPercent>0.5</fillPercent>
+	<hasTooltip>true</hasTooltip>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	<building>
+		<ai_combatDangerous>true</ai_combatDangerous>
+		<turretTopDrawSize>2.7</turretTopDrawSize>
+		<turretTopOffset>(0, 0.05)</turretTopOffset>
+	</building>
+	<placeWorkers>
+		<li>PlaceWorker_ShowTurretRadius</li>
+	</placeWorkers>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	<uiIconScale>0.95</uiIconScale>
+</ThingDef>
 
   <ThingDef ParentName="AutocannonTurretSTNL">
     <defName>Turret_RevenantSTNL</defName>

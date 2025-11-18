@@ -123,6 +123,38 @@
 </modExtensions>
 </VEF.Abilities.AbilityDef>
 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_WalterE1STNL</defName>
+	<label>Talent 1: Souvenir</label>
+	<description>Attacks will deal 25% more damage to the target and will inflict them with a stack of afterimage. Afterimage has a 15% chance to detonate upon receiving damage, which will deal 75% of the damage to enemies within the blast and stun them for 1 second.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_WisadelSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_RevenantTurretSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>WalterE1STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 <!-- Explosive Dawn -->
 
 <DamageDef>
@@ -202,6 +234,38 @@
         <forcedMissRadius>0.5</forcedMissRadius>
       </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_WalterE2STNL</defName>
+	<label>Talent 2: Revenant's Echo</label>
+	<description>If an enemy is within a 15 cells radius within line of sight around this person, spawns a revenant shadow at the nearest standable cell.\n\nStanding near a revenant shadow will cause this person to turn invisible.\n\nRevenant shadow spawn cooldown: 104s</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_WisadelSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_ExplosiveDawnSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>WalterE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <!-- W -->
@@ -320,6 +384,38 @@
 </modExtensions>
 </VEF.Abilities.AbilityDef>
 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_WE1STNL</defName>
+	<label>Talent 1: Ambush</label>
+	<description>Become invisible and gain 50% ATK speed after standing still for 10 seconds.\n\nEffect stops when this person moves.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_WSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_WMineSpawnSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>WE1STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 <!-- D12 -->
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
@@ -359,6 +455,38 @@
 <building>TrapIED_WSTNL</building>
 </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_WE2STNL</defName>
+	<label>Talent 2: Insult to Injury</label>
+	<description>Stunned enemies within a 4 cells radius will suffer from 18% more damage from any source.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_WSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_WD12STNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>WE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <!-- Civilight Eterna -->
@@ -451,6 +579,38 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_CiviElite1STNL</defName>
+<label>Talent 1: Dust of the Past</label>
+<description>Will build up to 3 stacks on allies within a 3 cells radius over a duration of 9s to increase their injury healing speed, stacks will decay over time.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_EternaSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_FutureelusiveSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>CiviE1STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>True</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_PresentreconstructedSTNL</defName>
 <label>The Present Reconstructed</label>
 <description>All allies in range will obtain the Regeneration hediff granting them increased healing (Caster Included). Enemies in range will obtain the Stagnation hediff, nullifying their ability to heal from wounds.</description>
@@ -491,6 +651,38 @@
 <prerequisites>
 <li>VPE_FutureelusiveSTNL</li>
 </prerequisites>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_CiviElite2STNL</defName>
+<label>Talent 2: The Echo of Kings</label>
+<description>Other creatures of the same faction as this person that are present on the same map will receive 10% less incoming damage from any source.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_EternaSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_PresentreconstructedSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>CiviE2STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>True</onlyOnceOnLoad>
 </li>
 </modExtensions>
 </VEF.Abilities.AbilityDef>
@@ -747,6 +939,38 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_InesElite1STNL</defName>
+<label>Talent 1: Shadow Weaver</label>
+<description>The first hit on each enemy will stun them for 5 seconds, 5 hours cooldown per target.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>3000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_InesSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_MurkyNightSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>VPE_InesElite1STNL</passiveHediff>
+<checkInterval>2500</checkInterval>
+<onlyOnceOnLoad>True</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_SolitaryReturnSTNL</defName>
 <label>Solitary Return</label>
 <description>Deploy a Shadow Sentry to a location of your choosing, the sentry will slow down anyone passing nearby and will last for 2 hours. Additionally obtain 110% ATK bonus for a duration of 1 hour.</description>
@@ -787,6 +1011,38 @@
 </modExtensions>
 </VEF.Abilities.AbilityDef>
 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_InesElite2STNL</defName>
+<label>Talent 2: Shadow Sentry</label>
+<description>Enemies within 3 cells will lose invisibility and have -30% movement speed.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+<castTime>15</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<!-- <durationTime>3000</durationTime> -->
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_InesSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
+<prerequisites>
+<li>VPE_SolitaryReturnSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>VPE_InesElite2STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>True</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 <!-- Mudrock -->
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
@@ -817,51 +1073,83 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastGoToTargetBase">
-<defName>VPE_CragSplitterSTNL</defName>
-<label>Crag Splitter</label>
-<description>The next attack will temporarily grant regeneration to the caster and deal 50 damage to the target.</description>
-<iconPath>UI_ArknightsSTNL/Abilities/Mudrock/Cragsplitter</iconPath>
-<durationTime>120</durationTime>
-<castTime>15</castTime>
-<castSound>FleetingNightSTNL</castSound>
-<range>231.9</range>
-<targetMode>Pawn</targetMode>
-<targetingParameters>
-			<canTargetLocations>False</canTargetLocations>
-			<canTargetSelf>True</canTargetSelf>
-			<canTargetAnimals>True</canTargetAnimals>
-			<canTargetPawns>True</canTargetPawns>
-			<canTargetHumans>True</canTargetHumans>
-			<canTargetMechs>True</canTargetMechs>
-		</targetingParameters>
-<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
-<needsTicking>true</needsTicking>
-<chance>0</chance>
-<modExtensions>
-<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-<path>VPE_MudrockSTNL</path>
-<level>2</level>
-<order>2</order>
-<psyfocusCost>0.24</psyfocusCost>
-<entropyGain>15</entropyGain>
-<prerequisites>
-<li>VPE_DefupmudrockSTNL</li>
-</prerequisites>
-</li>
-<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
-<onCaster>
-<li>RegenerationMudrockSTNL</li>
-</onCaster>
-</li>
-<li Class="VEF.Abilities.AbilityExtension_Projectile">
-        <projectile>BluntSTNL</projectile>
-      </li>
-	  <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-<effecterDef>NociosphereDepartComplete</effecterDef>
-<maintainForTicks>60</maintainForTicks>
-<scale>1</scale>
-</li>
-</modExtensions>
+	<defName>VPE_CragSplitterSTNL</defName>
+	<label>Crag Splitter</label>
+	<description>The next attack will temporarily grant regeneration to the caster and deal 50 damage to the target.</description>
+	<iconPath>UI_ArknightsSTNL/Abilities/Mudrock/Cragsplitter</iconPath>
+	<durationTime>120</durationTime>
+	<castTime>15</castTime>
+	<castSound>FleetingNightSTNL</castSound>
+	<range>231.9</range>
+	<targetMode>Pawn</targetMode>
+	<targetingParameters>
+		<canTargetLocations>False</canTargetLocations>
+		<canTargetSelf>True</canTargetSelf>
+		<canTargetAnimals>True</canTargetAnimals>
+		<canTargetPawns>True</canTargetPawns>
+		<canTargetHumans>True</canTargetHumans>
+		<canTargetMechs>True</canTargetMechs>
+	</targetingParameters>
+	<abilityClass>VEF.Abilities.Ability_ShootProjectile</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_MudrockSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>15</entropyGain>
+			<prerequisites>
+				<li>VPE_DefupmudrockSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+			<onCaster>
+				<li>RegenerationMudrockSTNL</li>
+			</onCaster>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_Projectile">
+			<projectile>BluntSTNL</projectile>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>NociosphereDepartComplete</effecterDef>
+			<maintainForTicks>60</maintainForTicks>
+			<scale>1</scale>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MudrockE1STNL</defName>
+	<label>Talent 1: Ward of the Fertile Soil</label>
+	<description>This condition will gain a stack every 9 seconds, a stack will be consumed upon taking damage to instantly heal 4 non permanent wounds.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_MudrockSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_CragSplitterSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>MudrockE1STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <DamageDef Name="ClubBaseTRUEDMGSTNL">
@@ -934,6 +1222,38 @@
 </onCaster>
 </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MudrockE2STNL</defName>
+	<label>Talent 2: Unshakable Solidarity</label>
+	<description>This person will take 30% less damage from any source.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_MudrockSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_BloodlineSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>MudrockE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <!-- Silence -->
@@ -1106,6 +1426,38 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_ShiningElite1STNL</defName>
+	<label>Talent 1: Black Fiend's Protection</label>
+	<description>All allies within a 3 cells radius of this pawn will receive 10% less damage from any source.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+	<castTime>15</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>3000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_ShiningSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>30</entropyGain>
+			<prerequisites>
+				<li>VPE_ShiningAutoprotectSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>ShiningE1STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>True</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_ShiningCreedFieldSTNL</defName>
 <label>Creed Field</label>
 <description>Caster: ATK +40%. Allies: DEF +30%. Duration: 3 Hours.</description>
@@ -1145,6 +1497,38 @@
 </onCaster>
 </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_ShiningElite2STNL</defName>
+	<label>Talent 2: Code of Law</label>
+	<description>Increases self's ATK SPD by 10%.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>15</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>3000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_ShiningSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>30</entropyGain>
+			<prerequisites>
+				<li>VPE_ShiningCreedFieldSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>ShiningE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>True</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <!-- Saileach -->
@@ -1225,6 +1609,38 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SaileachE1STNL</defName>
+<label>Talent 1: Unwavering Banner</label>
+<description>Allies standing within 2 cells of this person's location will have increased attack speed, reverse effect for enemies in range.\n\nAttack speed alteration: 10%</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SaileachSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_BannerSupportSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>SaileachE1STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>true</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_BannerSlowSTNL</defName>
 <label>Glorious Banner</label>
 <description>Inflict enemies within the area of effect with a movement speed debuff which caps their SPD to 70%, additionally x2 stagger duration for 3 hours.</description>
@@ -1264,6 +1680,38 @@
 </modExtensions>
 </VEF.Abilities.AbilityDef>
 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_SaileachE2STNL</defName>
+<label>Talent 2: Spiritual Influence</label>
+<description>Allies within 2 cells of this person's position will use 15% less psyfocus when casting psycasts.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_SaileachSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_BannerSlowSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>SaileachE2STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>true</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 <!-- Kal'tsit -->
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
@@ -1283,7 +1731,7 @@
 <path>VPE_KaltsitSTNL</path>
 <level>1</level>
 <order>2</order>
-<psyfocusCost>0.99</psyfocusCost>
+<psyfocusCost>0.85</psyfocusCost>
 <entropyGain>0</entropyGain>
 </li>
 <li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
@@ -1420,6 +1868,38 @@
 </modExtensions>
 </VEF.Abilities.AbilityDef>
 
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_KaltsitE2STNL</defName>
+	<label>Talent: Non-Damaging Restructuring</label>
+	<description>When Mon3tr dies, all nearby enemies in a 1 cell radius around it will receive 50 damage and be stunned for 3 seconds.\n\nMon3tr will now die on down.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_KaltsitSTNL</path>
+			<level>4</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_KalMeltdownSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>KaltsitE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
 <!-- Crownslayer -->
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
@@ -1502,6 +1982,38 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_CrownslayerE1STNL</defName>
+<label>Talent 1: Swallow Your Suffering</label>
+<description>Using psycasts will trigger a detonation that will shroud this person in smoke, nearby enemies will have their attack speed reduced by 20%.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_CrownslayerSTNL</path>
+<level>2</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_bombCrownSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>CrownslayerE1STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>true</onlyOnceOnLoad>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_ExeCrownSTNL</defName>
 <label>Smokescreen Execution</label>
 <description>Melee ATK +500%, SPD +25% and invisible until an attack is used or the duration runs out.</description>
@@ -1534,6 +2046,38 @@
 <effecterDef>RaisedRock_Collapse</effecterDef>
 <maintainForTicks>60</maintainForTicks>
 <scale>1</scale>
+</li>
+</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_CrownslayerE2STNL</defName>
+<label>Talent 2: Crownslayer's Glory</label>
+<description>Upon unlocking, this person will deal 20% more damage to creatures that did not hit them yet.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+<castTime>60</castTime>
+<castSound>ShadowlessSTNL</castSound>
+<durationTime>10000</durationTime>
+<range>0</range>
+<targetMode>Self</targetMode>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_CrownslayerSTNL</path>
+<level>3</level>
+<order>2</order>
+<psyfocusCost>0.19</psyfocusCost>
+<entropyGain>0</entropyGain>
+<prerequisites>
+<li>VPE_ExeCrownSTNL</li>
+</prerequisites>
+</li>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>CrownslayerE2STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>true</onlyOnceOnLoad>
 </li>
 </modExtensions>
 </VEF.Abilities.AbilityDef>
@@ -1607,6 +2151,38 @@
 </onTarget>
 </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MeteorE1STNL</defName>
+	<label>Talent 1: Anti-Air Specialist</label>
+	<description>This person will inflict 2 times more damage to flying creatures.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>10000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_MeteorSTNL</path>
+			<level>2</level>
+			<order>2</order>
+			<psyfocusCost>0.19</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_ArmorbreakerSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>MeteorE1STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>true</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
@@ -1731,35 +2307,99 @@
 </VEF.Abilities.AbilityDef>
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-<defName>VPE_AscalonDescentSTNL</defName>
-<label>Descent</label>
-<description>Self: ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
-<iconPath>UI_ArknightsSTNL/Abilities/Ascalon/Descent</iconPath>
-<castTime>60</castTime>
+<defName>VPE_AscalonElite1STNL</defName>
+<label>Talent 1: Mortal Interrogation</label>
+<description>Attacks on a target will inflict a damage over time effect that will reduce their movement speed by 18% per stack, stacks up to 3 times.</description>
+<iconPath>UI_ArknightsSTNL/Shared/EliteI</iconPath>
+<castTime>15</castTime>
 <castSound>ShadowlessSTNL</castSound>
-<durationTime>5500</durationTime>
+<durationTime>3000</durationTime>
 <range>0</range>
 <targetMode>Self</targetMode>
-<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
 <needsTicking>true</needsTicking>
 <chance>0</chance>
 <modExtensions>
 <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 <path>VPE_AscalonSTNL</path>
-<level>3</level>
+<level>2</level>
 <order>2</order>
-<psyfocusCost>0.49</psyfocusCost>
-<entropyGain>0</entropyGain>
+<psyfocusCost>0.24</psyfocusCost>
+<entropyGain>30</entropyGain>
 <prerequisites>
 <li>VPE_AscalonEndowmentSTNL</li>
 </prerequisites>
 </li>
-<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
-<onCaster>
-<li>DescentAscalonSTNL</li>
-</onCaster>
+<li Class="VPE_Arknights.PassiveGiverExt">
+<passiveHediff>AscalonE1STNL</passiveHediff>
+<checkInterval>60</checkInterval>
+<onlyOnceOnLoad>True</onlyOnceOnLoad>
 </li>
 </modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_AscalonDescentSTNL</defName>
+	<label>Descent</label>
+	<description>Self: ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
+	<iconPath>UI_ArknightsSTNL/Abilities/Ascalon/Descent</iconPath>
+	<castTime>60</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>5500</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_AscalonSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.49</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_AscalonEndowmentSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_ExtraHediffs">
+			<onCaster>
+				<li>DescentAscalonSTNL</li>
+			</onCaster>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_AscalonElite2STNL</defName>
+	<label>Talent 2: Penumbral Image</label>
+	<description>Attack speed will increase by 8%, and will gain an additional 6% when hostile pawns are within a 3 cells radius around this pawn.</description>
+	<iconPath>UI_ArknightsSTNL/Shared/EliteII</iconPath>
+	<castTime>15</castTime>
+	<castSound>ShadowlessSTNL</castSound>
+	<durationTime>3000</durationTime>
+	<range>0</range>
+	<targetMode>Self</targetMode>
+	<abilityClass>VPE_Arknights.Ability_PassiveGiver</abilityClass>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_AscalonSTNL</path>
+			<level>3</level>
+			<order>2</order>
+			<psyfocusCost>0.24</psyfocusCost>
+			<entropyGain>30</entropyGain>
+			<prerequisites>
+				<li>VPE_AscalonDescentSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Arknights.PassiveGiverExt">
+			<passiveHediff>AscalonE2STNL</passiveHediff>
+			<checkInterval>60</checkInterval>
+			<onlyOnceOnLoad>True</onlyOnceOnLoad>
+		</li>
+	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
 </Defs>

@@ -1,0 +1,1164 @@
+<Defs>
+	<!-- Ines -->
+	<!-- E1 -->
+	<HediffDef>
+		<defName>VPE_InesElite1STNL</defName>
+		<label>Shadow Weaver</label>
+		<description>This person will stun the target enemy for 5 seconds, 5 hours cooldown per individual target.</description>
+		<hediffClass>VPE_Arknights.Hediff_ShadowWeaver</hediffClass>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<!-- <lethalSeverity>1</lethalSeverity> -->
+		<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<stages>
+			<li>
+		</li>
+		</stages>
+		<comps>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>10000</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+			<!-- </li> -->
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VPE_ShadowWeaverCooldownSTNL</defName>
+		<label>Shadow Weaver Cooldown</label>
+		<description>This creature cannot be affected by Shadow Weaver's effect.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<!-- <lethalSeverity>1</lethalSeverity> -->
+		<defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<stages>
+			<li>
+		</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>12500</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- E2 -->
+		<HediffDef>
+		<defName>VPE_InesElite2STNL</defName>
+		<label>Shadow Sentry</label>
+		<description>Enemies within a 3 cells radius will lose invisibility and have -30% movement speed.</description>
+		<hediffClass>VPE_Arknights.Hediff_ShadowSentryPassive</hediffClass>
+		<initialSeverity>1</initialSeverity>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<!-- <lethalSeverity>1</lethalSeverity> -->
+		<defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<stages>
+			<li>
+		</li>
+		</stages>
+		<comps>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>10000</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+			<!-- </li> -->
+		</comps>
+	</HediffDef>
+	
+<HediffDef>
+	<defName>SlowedInesPassiveE2STNL</defName>
+	<label>Shadow Sentry</label>
+	<description>This creature is being slowed down.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.70</postFactor>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Crownslayer -->
+
+<!-- E1 -->
+
+<HediffDef>
+	<defName>CrownslayerE1STNL</defName>
+	<label>Swallow Your Suffering</label>
+	<description>Using psycasts will trigger a detonation that will shroud this person in smoke, nearby enemies will have their attack speed reduced by 20%.</description>
+	<hediffClass>VPE_Arknights.Hediff_SwallowSuffering</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>CrownslayerE1DebuffSTNL</defName>
+	<label>Swallow Your Suffering</label>
+	<description>This creature will attack slower than normal.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.3, 0.3)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12500</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<statFactors>
+				<RangedCooldownFactor>1.20</RangedCooldownFactor>
+				<MeleeCooldownFactor>1.20</MeleeCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>CrownslayerE2STNL</defName>
+	<label>Crownslayer's Glory</label>
+	<description>This person will deal 20% more damage to creatures that have not dealt damage to them.</description>
+	<hediffClass>VPE_Arknights.Hediff_CrownslayersGlory</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0.3, 0.3)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>CrownslayerE2GotHitSTNL</defName>
+	<label>Crownslayer's Glory Immunity</label>
+	<description>This person has hit someone with the Crownslayer's Glory condition, it will not function on them.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.3, 0.3)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12500</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Civilight -->
+
+<!-- E1 -->
+
+<HediffDef>
+	<defName>CiviE1STNL</defName>
+	<label>Dust of the Past</label>
+	<description>Will build up to 3 stacks on allies within a 3 cells radius over a duration of 9s to increase their injury healing speed, stacks will decay over time.</description>
+	<hediffClass>VPE_Arknights.Hediff_CiviDust</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>CiviE1StackSTNL</defName>
+	<label>Dust of the Past</label>
+	<description>This creature will gain increased healing speed.</description>
+	<hediffClass>VPE_Arknights.Hediff_DustStack</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>3</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<minSeverity>1</minSeverity>
+			<statFactors>
+				<InjuryHealingFactor>1.3</InjuryHealingFactor>
+			</statFactors>
+		</li>
+		<li>
+			<minSeverity>2</minSeverity>
+			<statFactors>
+				<InjuryHealingFactor>1.6</InjuryHealingFactor>
+			</statFactors>
+		</li>
+		<li>
+			<minSeverity>3</minSeverity>
+			<statFactors>
+				<InjuryHealingFactor>2</InjuryHealingFactor>
+			</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>CiviE2STNL</defName>
+	<label>The Echo of Kings</label>
+	<description>Creatures of the same faction as this person will receive 10% less incoming damage.</description>
+	<hediffClass>VPE_Arknights.Hediff_EchoOfKings</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>CiviE2BuffSTNL</defName>
+	<label>The Echo of Kings</label>
+	<description>This creature is being protected by The Echo of Kings.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+		<disappearsAfterTicks>360</disappearsAfterTicks>
+		<showRemainingTime>false</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<IncomingDamageFactor>0.90</IncomingDamageFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Ascalon -->
+
+<HediffDef>
+	<defName>AscalonE1STNL</defName>
+	<label>Mortal Interrogation</label>
+	<description>Attacks will reduce the target's movement speed and inflict them with a condition that will deal damage over time.\n\nThis condition will not harm downed creatures.</description>
+	<hediffClass>VPE_Arknights.Hediff_MortalInterrogation</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0.7)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>AscalonE1DebuffSTNL</defName>
+	<label>Mortal Interrogation</label>
+	<description>This creature is suffering from a condition that will damage them over time until they are downed or the duration expires.\n\nStacks up to 3 times.</description>
+	<hediffClass>VPE_Arknights.Hediff_MortalDebuff</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>3</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.5, 0, 0.5)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>1500</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<minSeverity>1</minSeverity>
+			<label>1</label>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.82</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>2</minSeverity>
+			<label>2</label>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.64</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>3</minSeverity>
+			<label>3</label>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.46</postFactor>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>AscalonE2STNL</defName>
+	<label>Penumbral Image</label>
+	<description>8% Attack speed increase, will gain an additional 6% when hostile pawns are within a 3 cells radius around this pawn.</description>
+	<hediffClass>VPE_Arknights.Hediff_PenumbralImage</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>3</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.5, 0, 0.5)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>1500</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<minSeverity>1</minSeverity>
+			<statFactors>
+				<MeleeCooldownFactor>0.92</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.92</RangedCooldownFactor>
+			</statFactors>
+		</li>
+		<li>
+			<minSeverity>2</minSeverity>
+			<statFactors>
+				<MeleeCooldownFactor>0.87</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.87</RangedCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Shining -->
+
+<!-- E1 -->
+
+<HediffDef>
+	<defName>ShiningE1STNL</defName>
+	<label>Black Fiend's Protection</label>
+	<description>All allies within a 3 cells radius will receive 10% less incoming damage.</description>
+	<hediffClass>VPE_Arknights.Hediff_BlackFiendsProt</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>1500</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>ShiningE1BuffSTNL</defName>
+	<label>Black Fiend's Protection</label>
+	<description>This person is being protected by a nearby Shining path user.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0.7, 0.7)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<IncomingDamageFactor>0.90</IncomingDamageFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>ShiningE2STNL</defName>
+	<label>Code of Law</label>
+	<description>This person has their attack speed increased by their talent.</description>
+	<hediffClass>VPE_Arknights.Hediff_BlackFiendsProt</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>1500</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<MeleeCooldownFactor>0.90</MeleeCooldownFactor>
+		<RangedCooldownFactor>0.90</RangedCooldownFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Saileach -->
+
+<HediffDef>
+	<defName>SaileachE1STNL</defName>
+	<label>Unwavering Banner</label>
+	<description>This person has their attack speed increased by their talent.</description>
+	<hediffClass>VPE_Arknights.Hediff_UnwBanner</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>1500</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>SaileachE1BuffSTNL</defName>
+	<label>Unwavering Banner</label>
+	<description>This person has their attack speed increased by the Unwavering Banner talent.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 1, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<MeleeCooldownFactor>0.90</MeleeCooldownFactor>
+		<RangedCooldownFactor>0.90</RangedCooldownFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>SaileachE1DebuffSTNL</defName>
+	<label>Unwavering Banner</label>
+	<description>This person has their attack speed decreased by the Unwavering Banner talent.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<MeleeCooldownFactor>1.1</MeleeCooldownFactor>
+		<RangedCooldownFactor>1.1</RangedCooldownFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>SaileachE2STNL</defName>
+	<label>Spiritual Influence</label>
+	<description>This person will reduce nearby allies' psyfocus consumption.</description>
+	<hediffClass>VPE_Arknights.Hediff_SpiritualInfluence</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>SaileachE2BuffSTNL</defName>
+	<label>Spiritual Influence</label>
+	<description>This person has their attack speed increased by their talent.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>180</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<VPE_PsyfocusCostFactor>0.85</VPE_PsyfocusCostFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Mudrock -->
+
+<!-- E1 -->
+
+<HediffDef>
+	<defName>MudrockE1STNL</defName>
+	<label>Ward of the Fertile Soil</label>
+	<description>This condition will gain a stack every 9 seconds, being hit will consume a stack to instantly heal 4 non permanent wounds.\n\nA maximum of 3 stacks may exist simultaneously.</description>
+	<hediffClass>VPE_Arknights.Hediff_WardFertSoil</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>4</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>MudrockE2STNL</defName>
+	<label>Unshakable Solidarity</label>
+	<description>This person will take reduced damage.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>4</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<IncomingDamageFactor>0.70</IncomingDamageFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+ <!-- Meteor -->
+ 
+ <HediffDef>
+	<defName>MeteorE1STNL</defName>
+	<label>Anti-Air Specialist</label>
+	<description>This person will inflict 2 times more damage to flying creatures.</description>
+	<hediffClass>VPE_Arknights.Hediff_AntiAir</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Kaltsit -->
+
+<HediffDef>
+	<defName>KaltsitE2STNL</defName>
+	<label>Non-Damaging Restructuring</label>
+	<description>When Mon3tr dies, all nearby enemies in a 1 cell radius around it will receive 50 damage and be stunned for 3 seconds.</description>
+	<hediffClass>VPE_Arknights.Hediff_KaltsitE2</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0, 0.7, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>KaltsitE2BuffSTNL</defName>
+	<label>Non-Damaging Restructuring</label>
+	<description>When Mon3tr dies, all nearby enemies in a 1 cell radius around it will receive 50 damage and be stunned for 3 seconds.\n\nMon3tr will die on down.</description>
+	<hediffClass>VPE_Arknights.Hediff_Mon3trBomb</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- W -->
+
+<!-- E1 -->
+
+<HediffDef>
+	<defName>WE1STNL</defName>
+	<label>Ambush</label>
+	<description>After standing still for 10 seconds, gain invisibility and 50% faster ATK speed for as long as you stand still.</description>
+	<hediffClass>VPE_Arknights.Hediff_AmbushW</hediffClass>
+	<initialSeverity>11</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>11</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<minSeverity>1</minSeverity>
+			<statFactors>
+				<MeleeCooldownFactor>0.66</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.66</RangedCooldownFactor>
+			</statFactors>
+		</li>
+		<li>
+			<minSeverity>2</minSeverity>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>WE1BuffSTNL</defName>
+	<label>Ambush</label>
+	<description>hampter.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_Invisibility">
+			<visibleToPlayer>true</visibleToPlayer>
+			<recoverFromDisruptedTicks>1</recoverFromDisruptedTicks>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>WE2STNL</defName>
+	<label>Insult to Injury</label>
+	<description>Stunned enemies within a 4 cells radius will suffer from 18% more damage from any source.</description>
+	<hediffClass>VPE_Arknights.Hediff_InsultToInjury</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>WE2DebuffSTNL</defName>
+	<label>Insult to Injury</label>
+	<description>This creature will take increased damage from attacks.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>true</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+		<disappearsAfterTicks>61</disappearsAfterTicks>
+		<showRemainingTime>false</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		<statFactors>
+		<IncomingDamageFactor>1.18</IncomingDamageFactor>
+		</statFactors>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Waltuh, put your psylink away waltuh, i'm not psycasting with you right now waltuh-->
+
+<HediffDef>
+	<defName>WalterE1STNL</defName>
+	<label>Souvenir</label>
+	<description>Attacks will deal 25% more damage to the target and will inflict them with a stack of afterimage. Afterimage has a 15% chance to detonate upon receiving damage, which will deal 75% of the damage to enemies within the blast and stun them for 1 second.</description>
+	<hediffClass>VPE_Arknights.Hediff_Souvenir</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.8, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>WalterE1MarkSTNL</defName>
+	<label>Afterimage</label>
+	<description>This condition has has a 15% chance to detonate upon receiving damage, which will deal 75% of the damage to enemies within the blast and stun them for 1 second.</description>
+	<hediffClass>VPE_Arknights.Hediff_Afterimage</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>True</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- E2 -->
+
+<HediffDef>
+	<defName>WalterE2STNL</defName>
+	<label>Revenant's Echo</label>
+	<description>If an enemy is within a 15 cells radius within line of sight around this person, spawns a revenant shadow at the nearest standable cell.\n\nStanding near a revenant shadow will cause this person to turn invisible.\n\nRevenant shadow spawn cooldown: 104s</description>
+	<hediffClass>VPE_Arknights.Hediff_RevenantsEcho</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>WalterE2BuffSTNL</defName>
+	<label>Camouflage</label>
+	<description>This person is invisible due to standing next to a revenant's shadow.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.7, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<comps>
+		<!-- <li Class="HediffCompProperties_Disappears"> -->
+		<!-- <disappearsAfterTicks>180</disappearsAfterTicks> -->
+		<!-- <showRemainingTime>true</showRemainingTime> -->
+		<!-- </li> -->
+		<li Class="HediffCompProperties_Invisibility">
+			<visibleToPlayer>true</visibleToPlayer>
+			<recoverFromDisruptedTicks>1</recoverFromDisruptedTicks>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+	<stages>
+		<li>
+			<!-- <becomeVisible>false</becomeVisible> -->
+		</li>
+	</stages>
+</HediffDef>
+</Defs>

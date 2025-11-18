@@ -152,32 +152,30 @@
 <!-- Guardmiya -->
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>FleetingNightSTNL</defName>
-<defaultLabelColor>(1, 0.7, 0.7)</defaultLabelColor>
-<label>Ying Xiao - Fleeting Night</label>
-<description>This pawn is currently in the Fleeting Night state, granting them increased ATK, ATK SPD and DEF.</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<statOffsets>
-<VEF_MeleeAttackSpeedFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1</VEF_MeleeAttackSpeedFactor>
-</statOffsets>
-<statFactors>
-<VEF_MeleeAttackDamageFactor>1.50</VEF_MeleeAttackDamageFactor>
-<VEF_RangeAttackDamageFactor>1.50</VEF_RangeAttackDamageFactor>
-<StaggerDurationFactor>0.5</StaggerDurationFactor>
-<IncomingDamageFactor>0.90</IncomingDamageFactor>
-</statFactors>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>FleetingNightSTNL</defName>
+	<defaultLabelColor>(1, 0.7, 0.7)</defaultLabelColor>
+	<label>Ying Xiao - Fleeting Night</label>
+	<description>This pawn is currently in the Fleeting Night state, granting them increased ATK, ATK SPD and DEF.</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<statFactors>
+				<MeleeCooldownFactor>0.50</MeleeCooldownFactor>
+				<VEF_MeleeAttackDamageFactor>1.50</VEF_MeleeAttackDamageFactor>
+				<VEF_RangeAttackDamageFactor>1.50</VEF_RangeAttackDamageFactor>
+				<StaggerDurationFactor>0.5</StaggerDurationFactor>
+				<IncomingDamageFactor>0.90</IncomingDamageFactor>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 
 <HediffDef>
@@ -280,30 +278,30 @@
 </HediffDef>
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>MurkyNightSTNL</defName>
-<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
-<label>Murky Night</label>
-<description>This creature is psychically twisting the perceptions of humans, animals, and machines in the vicinity in such a way as to seem invisible. The eye receives their image as normal but the mind cannot perceive it.</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<statOffsets>
-<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
-<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
-</statOffsets>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_Invisibility">
-<visibleToPlayer>true</visibleToPlayer>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>MurkyNightSTNL</defName>
+	<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
+	<label>Murky Night</label>
+	<description>This creature is psychically twisting the perceptions of humans, animals, and machines in the vicinity in such a way as to seem invisible. The eye receives their image as normal but the mind cannot perceive it.</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<statFactors>
+				<MeleeCooldownFactor>0.66</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.66</RangedCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_Invisibility">
+			<visibleToPlayer>true</visibleToPlayer>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 
 <HediffDef>
@@ -534,29 +532,31 @@
 <!-- Shining -->
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>CreedSTNL</defName>
-<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
-<label>Creed</label>
-<description>ATK +67%; ATK SPD +20%.</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<statOffsets>
-<VEF_MeleeAttackSpeedFactor>0.20</VEF_MeleeAttackSpeedFactor>
-<VEF_RangeAttackSpeedFactor>0.20</VEF_RangeAttackSpeedFactor>
-<VEF_MeleeAttackDamageFactor>0.67</VEF_MeleeAttackDamageFactor>
-<VEF_RangeAttackDamageFactor>0.67</VEF_RangeAttackDamageFactor>
-</statOffsets>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>CreedSTNL</defName>
+	<defaultLabelColor>(1,1, 0.3)</defaultLabelColor>
+	<label>Creed</label>
+	<description>ATK +67%; ATK SPD +20%.</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<statFactors>
+				<MeleeCooldownFactor>0.80</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.80</RangedCooldownFactor>
+			</statFactors>
+			<statOffsets>
+				<VEF_MeleeAttackDamageFactor>0.83</VEF_MeleeAttackDamageFactor>
+				<VEF_RangeAttackDamageFactor>0.83</VEF_RangeAttackDamageFactor>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 
 <HediffDef>
@@ -807,27 +807,27 @@
 </HediffDef>
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>KalCoordinationSTNL</defName>
-<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
-<label>Command: Tactical Coordination</label>
-<description>+60% ATK SPD.</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<statOffsets>
-<VEF_MeleeAttackSpeedFactor>0.60</VEF_MeleeAttackSpeedFactor>
-<VEF_RangeAttackSpeedFactor>0.60</VEF_RangeAttackSpeedFactor>
-</statOffsets>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>KalCoordinationSTNL</defName>
+	<defaultLabelColor>(0.5,0.5, 0.5)</defaultLabelColor>
+	<label>Command: Tactical Coordination</label>
+	<description>+60% ATK SPD.</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<statFactors>
+				<MeleeCooldownFactor>0.62</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.62</RangedCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 
 <HediffDef>
@@ -961,26 +961,26 @@
 <!-- Meteor -->
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>MarksmanSTNL</defName>
-<defaultLabelColor>(1,1,1)</defaultLabelColor>
-<label>Marksman's Proficiency</label>
-<description>+70% Ranged ATK SPD</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<statOffsets>
-<VEF_RangeAttackSpeedFactor>0.70</VEF_RangeAttackSpeedFactor>
-</statOffsets>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>MarksmanSTNL</defName>
+	<defaultLabelColor>(1,1,1)</defaultLabelColor>
+	<label>Marksman's Proficiency</label>
+	<description>+70% Ranged ATK SPD</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<statFactors>
+				<RangedCooldownFactor>0.58</RangedCooldownFactor>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 
 <HediffDef>
@@ -1111,30 +1111,32 @@
 </HediffDef>
 
 <HediffDef>
-<hediffClass>HediffWithComps</hediffClass>
-<defName>DescentAscalonSTNL</defName>
-<defaultLabelColor>(0.9,0, 0.9)</defaultLabelColor>
-<label>Descent</label>
-<description>ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
-<isBad>false</isBad>
-<stages>
-<li>
-<regeneration>100</regeneration>
-<statOffsets>
-<MeleeDodgeChance>0.30</MeleeDodgeChance>
-<VEF_MeleeAttackSpeedFactor>0.50</VEF_MeleeAttackSpeedFactor>
-<VEF_RangeAttackSpeedFactor>0.50</VEF_RangeAttackSpeedFactor>
-<VEF_MeleeAttackDamageFactor>0.20</VEF_MeleeAttackDamageFactor>
-<VEF_RangeAttackDamageFactor>0.20</VEF_RangeAttackDamageFactor>
-</statOffsets>
-</li>
-</stages>
-<comps>
-<li Class="HediffCompProperties_Disappears">
-<disappearsAfterTicks>12000</disappearsAfterTicks>
-<showRemainingTime>true</showRemainingTime>
-</li>
-<li Class="HediffCompProperties_DisappearsOnDeath"/>
-</comps>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defName>DescentAscalonSTNL</defName>
+	<defaultLabelColor>(0.9,0, 0.9)</defaultLabelColor>
+	<label>Descent</label>
+	<description>ATK +20%, ATK SPD +50%, +30% Melee dodge chance, slow HP regeneration.</description>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<regeneration>100</regeneration>
+			<statFactors>
+				<MeleeCooldownFactor>0.66</MeleeCooldownFactor>
+				<RangedCooldownFactor>0.66</RangedCooldownFactor>
+			</statFactors>
+			<statOffsets>
+				<MeleeDodgeChance>0.30</MeleeDodgeChance>
+				<VEF_MeleeAttackDamageFactor>0.20</VEF_MeleeAttackDamageFactor>
+				<VEF_RangeAttackDamageFactor>0.20</VEF_RangeAttackDamageFactor>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>12000</disappearsAfterTicks>
+			<showRemainingTime>true</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
 </HediffDef>
 </Defs>
