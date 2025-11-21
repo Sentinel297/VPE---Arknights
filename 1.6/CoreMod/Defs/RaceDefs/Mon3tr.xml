@@ -3,6 +3,7 @@
 	<ThingDef ParentName="AnimalThingBase" Name="VPE_ConstructBaseMonstrSTNL" Abstract="True">
 		<thingClass>VanillaPsycastsExpanded.Technomancer.Pawn_Construct</thingClass>
 		<statBases>
+		    <VacuumResistance MayRequire="Ludeon.Rimworld.Odyssey">1</VacuumResistance>
 			<ToxicResistance>1</ToxicResistance>
 			<PsychicSensitivity>0</PsychicSensitivity>
 			<Flammability>0</Flammability>
